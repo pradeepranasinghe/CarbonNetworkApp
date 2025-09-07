@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1757216173765,
+    "name": "name",
+    "value": "Pradeep1"
+  },
+  {
+    "id": 1757217039643,
+    "componentId": "1",
+    "txnid": "1",
+    "trpLegName": "Sea1",
+    "componentName": "Chg1",
+    "componentType": "Factory",
+    "level": 1,
+    "scope": "1",
+    "unit": "L",
+    "energyType": "L",
+    "parentUuid": "0",
+    "consumedQty": 0,
+    "emissionFactor": 1
+  },
+  {
+    "id": 1757219277962,
+    "componentId": "2",
+    "txnid": "1",
+    "trpLegName": "Sea1",
+    "componentName": "M1",
+    "componentType": "Material",
+    "level": 1,
+    "scope": "1",
+    "unit": "L",
+    "energyType": "L",
+    "parentUuid": "0",
+    "consumedQty": 0,
+    "emissionFactor": 1
+  },
+  {
+    "componentUuid": "75a6d3bf-ab42-408e-8a88-78904ebba37d",
+    "componentId": "2",
+    "txnid": "1",
+    "trpLegName": "Sea1",
+    "componentName": "Chg1",
+    "componentType": "Factory",
+    "level": 1,
+    "scope": "2",
+    "unit": "",
+    "energyType": "",
+    "parentUuid": null,
+    "consumedQty": 0,
+    "emissionFactor": 0,
+    "total": 0,
+    "createdAt": "2025-09-07T11:48:06.121Z",
+    "updatedAt": "2025-09-07T11:48:06.121Z"
+  }
+]
