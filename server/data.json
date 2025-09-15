@@ -51,7 +51,7 @@
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-09T12:57:25.537Z",
-    "updatedAt": "2025-09-11T23:51:05.528Z"
+    "updatedAt": "2025-09-14T14:18:48.323Z"
   },
   {
     "componentUuid": "7a90c9f9-701c-45f6-9b8c-4a06f783f4d4",
@@ -60,7 +60,7 @@
     "trpLegName": "Farm Gate to Local Airport",
     "componentName": "Road Transport / Activity",
     "componentType": "activity",
-    "level": 1,
+    "level": 2,
     "scope": "1",
     "unit": "HRS",
     "energyType": "",
@@ -69,7 +69,7 @@
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-09T13:01:11.708Z",
-    "updatedAt": "2025-09-12T00:21:39.066Z"
+    "updatedAt": "2025-09-14T12:49:37.705Z"
   },
   {
     "componentUuid": "81dc31ef-f9d6-4f3e-9d49-5d902d6794a3",
@@ -114,7 +114,7 @@
     "trpLegName": "Farm Gate to Local Airport",
     "componentName": "Resource Operator",
     "componentType": "resource",
-    "level": 1,
+    "level": 3,
     "scope": "",
     "unit": "HRS",
     "energyType": "",
@@ -123,7 +123,7 @@
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-11T00:29:46.097Z",
-    "updatedAt": "2025-09-12T00:26:07.493Z"
+    "updatedAt": "2025-09-14T12:48:58.515Z"
   },
   {
     "componentUuid": "b9371864-95c0-40d3-8a39-0ffe45bc3aef",
@@ -150,7 +150,7 @@
     "trpLegName": "Farm Gate to Local Airport",
     "componentName": "Resource Operator",
     "componentType": "resource",
-    "level": 1,
+    "level": 3,
     "scope": "",
     "unit": "HRS",
     "energyType": "",
@@ -159,7 +159,7 @@
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-11T23:44:56.128Z",
-    "updatedAt": "2025-09-12T00:25:30.613Z"
+    "updatedAt": "2025-09-14T12:50:17.572Z"
   },
   {
     "componentUuid": "7f3cc7ff-7df6-4bd0-85dd-1118b57c57fe",
@@ -186,7 +186,7 @@
     "trpLegName": "Farm Gate to Local Airport",
     "componentName": "Resource Operator",
     "componentType": "resource",
-    "level": 1,
+    "level": 3,
     "scope": "",
     "unit": "HRS",
     "energyType": "",
@@ -195,6 +195,6 @@
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-12T00:24:04.675Z",
-    "updatedAt": "2025-09-12T00:24:26.165Z"
+    "updatedAt": "2025-09-14T12:50:27.794Z"
   }
 ]
