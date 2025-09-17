@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Image Example</title>
+  <style>
+    /* You can add custom styles here if needed */
+  </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid #ccc;"></canvas>
+<div id="hoverArea">
+    <div id="coords">X: 0, Y: 0</div>
+  </div>
+
+<!-- Optional: hidden image or preload -->
+<div style="display:none;">
+  <img id="s1" width="50" height="50" src="s1.svg">
+  <img id="s2" width="50" height="50" src="s2.svg">
+  <img id="s3" width="50" height="50" src="s3.svg">
+  <img id="s4" width="50" height="50" src="s4.svg">
+</div>
+<script>
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+ctx.font = '9px Arial';
+ctx.fillStyle = 'black';
+
+const networkObj = {
+  "network": [
+    {
+      "s1-site": "CHFG1",
+      "s2-products": [
+        {
+          "s2-product": "M1",
+          "s3-activities": [
+            {
+              "s3-activity": "UA1",
+              "s4-resources": [
+                { "s4-resource": "RM3" },
+                { "s4-resource": "RL3" }
+              ]
+            },
+            {
+              "s3-activity": "RA1",
+              "s4-resources": [
+                { "s4-resource": "RM2" },
+                { "s4-resource": "RL2" }
+              ]
+            },
+            {
+              "s3-activity": "LA1",
+              "s4-resources": [
+                { "s4-resource": "AL1" },
+                { "s4-resource": "RM1" },
+                { "s4-resource": "RM1" }
+              ]
+            },
+            {
+              "s3-activity": "LA1",
+              "s4-resources": [
+                { "s4-resource": "AL1" },
+                { "s4-resource": "RM1" },
+                { "s4-resource": "RM1" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+const imgCache = {}; // to store loaded images
+
+function loadImages(types) {
+  return Promise.all(types.map(type => {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.src = type + '.svg';
+      img.onload = () => {
+        imgCache[type] = img;
+        resolve();
+      };
+    });
+  }));
+}
+
+function drawNode(type, label, x, y) {
+  const img = imgCache[type];
+  if (img) {
+    ctx.drawImage(img, x, y, imageSize, imageSize);
+    ctx.fillStyle = 'white';
+    //ctx.fillRect(x + 5, y + 35, ctx.measureText(label).width + 4, 14);
+    ctx.fillStyle = 'black';
+    ctx.fillText(label, x + 10, y +30);
+  }
+}
+
+function drawLine(x1, y1, x2, y2) {
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
+}
+
+function drawLineShape1(x1, y1, x2, y2) {
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x1, y2+(imageSize/2));
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(x1, y2+(imageSize/2));
+  ctx.lineTo(x1-(imageSize/2), y2+(imageSize/2));
+  ctx.stroke();
+
+}
+
+function drawLineShape2(idx, x1, y1, x2, y2) {
+
+  if(idx===0){
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x1, y1+40);
+    ctx.stroke();
+  }
+  else{
+    ctx.beginPath();
+    ctx.moveTo(x1-x2+90, y2+25);
+    ctx.lineTo(x2+90, y2+25);
+    ctx.stroke();
+
+  } 
+
+}
+
+function drawLineShape3(x1, x2, y1) {
+
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y1);
+    ctx.stroke();
+
+}
+
+
+
+const imageSize = 50;
+const xSpacing = 50;
+const ySpacing = 100;
+
+
+function drawNetwork(networkObj) {
+  const startX = 650;
+  const startY = 40;
+
+  const site = networkObj.network[0];
+  const s1Label = site["s1-site"];
+  const s1X = startX;
+  const s1Y = startY;
+
+  let loop4X = 660;
+  let loop3X = 600;
+
+  drawNode('s1', s1Label, s1X, s1Y); //CHFG1 
+
+  site["s2-products"].forEach((product, pIdx) => {
+    const s2Label = product["s2-product"];
+    const s2X = s1X - xSpacing;
+    const s2Y = s1Y + ySpacing;
+
+    drawNode('s2', s2Label, s2X, s2Y); // M1 
+    drawLineShape1(s1X + imageSize / 2, s1Y + imageSize, s2X + imageSize / 2, s2Y);
+
+    product["s3-activities"].forEach((activity, aIdx) => {
+      const s3Label = activity["s3-activity"];
+      const s3X = s2X - (xSpacing+40) * aIdx;
+      const s3Y = s2Y + ySpacing;
+      const s3LineX2 = loop3X - (imageSize * activity["s4-resources"].length);
+      
+      drawNode('s3', s3Label, loop3X, s3Y); // Activities 
+
+      if(product["s3-activities"].length-1!=aIdx){
+        
+        drawLineShape3(loop3X, s3LineX2,s3Y+25);
+      }
+
+      if(aIdx == 0)
+        drawLine(loop3X+25,s3Y, loop3X+25, s2Y+45);
+
+      
+
+      activity["s4-resources"].forEach((resource, rIdx) => {
+        const s4Label = resource["s4-resource"];
+        //const s4X = s3X - 40 + rIdx * xSpacing * 0.6;
+        const s4X = s3X   + rIdx * xSpacing ;
+        const s4Y = s3Y + ySpacing;
+
+        loop4X -= (imageSize + 10);
+        loop3X -= (imageSize + 10);
+
+        
+        drawNode('s4', s4Label, loop4X, s4Y);   // Resources 
+        if(activity["s4-resources"].length-1!=rIdx)
+          drawLineShape3(loop4X-imageSize,loop4X,s4Y+25);
+
+        if(rIdx == 0)
+          drawLine(loop4X+25,s4Y, loop4X+25, s3Y+45);
+
+        //drawNode('s4',s4Label, s3X+imageSize, s4Y);
+        //drawLine(s3X + imageSize / 2, s3Y + imageSize, s4X + imageSize / 2, s4Y);
+      });
+    });
+  });
+}
+
+
+
+
+// === INIT: Load images first then draw ===
+loadImages(['s1', 's2', 's3', 's4']).then(() => {
+  drawNetwork(networkObj);
+});
+</script>
+</body>
+</html>
