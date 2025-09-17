@@ -29,11 +29,11 @@
     "unit": "HRS",
     "energyType": "",
     "parentUuid": "2fcf97d4-180d-4041-9df3-8550d3038e55",
-    "consumedQty": 0.5,
+    "consumedQty": 2,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-09T12:54:02.934Z",
-    "updatedAt": "2025-09-12T00:15:35.616Z"
+    "updatedAt": "2025-09-17T09:47:59.972Z"
   },
   {
     "componentUuid": "2fcf97d4-180d-4041-9df3-8550d3038e55",
@@ -83,11 +83,11 @@
     "unit": "HRS",
     "energyType": "",
     "parentUuid": "2fcf97d4-180d-4041-9df3-8550d3038e55",
-    "consumedQty": 0.5,
+    "consumedQty": 2,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-09T13:05:19.414Z",
-    "updatedAt": "2025-09-12T00:16:27.402Z"
+    "updatedAt": "2025-09-17T09:48:37.577Z"
   },
   {
     "componentUuid": "ac16b977-1011-4a08-a03f-2c6a747586c4",
@@ -101,11 +101,11 @@
     "unit": "FDFHR",
     "energyType": "Fuel Diesel ",
     "parentUuid": "38a08589-4340-4134-a76c-aa3491f2da93",
-    "consumedQty": 2.5,
+    "consumedQty": 2,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-10T12:13:36.275Z",
-    "updatedAt": "2025-09-12T00:20:13.035Z"
+    "updatedAt": "2025-09-17T09:46:17.209Z"
   },
   {
     "componentUuid": "a22ee865-2944-4c09-a493-c2fbc79428a2",
@@ -119,11 +119,11 @@
     "unit": "HRS",
     "energyType": "",
     "parentUuid": "38a08589-4340-4134-a76c-aa3491f2da93",
-    "consumedQty": 1,
+    "consumedQty": 3,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-11T00:29:46.097Z",
-    "updatedAt": "2025-09-14T12:48:58.515Z"
+    "updatedAt": "2025-09-17T09:46:32.064Z"
   },
   {
     "componentUuid": "b9371864-95c0-40d3-8a39-0ffe45bc3aef",
@@ -137,11 +137,11 @@
     "unit": "FDFHR",
     "energyType": "Fuel Diesel ",
     "parentUuid": "7a90c9f9-701c-45f6-9b8c-4a06f783f4d4",
-    "consumedQty": 2.5,
+    "consumedQty": 4,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-11T23:43:50.831Z",
-    "updatedAt": "2025-09-12T00:24:59.689Z"
+    "updatedAt": "2025-09-17T09:46:54.126Z"
   },
   {
     "componentUuid": "72e19ffd-3843-4ebc-813d-db655f55d432",
@@ -155,11 +155,11 @@
     "unit": "HRS",
     "energyType": "",
     "parentUuid": "7a90c9f9-701c-45f6-9b8c-4a06f783f4d4",
-    "consumedQty": 1,
+    "consumedQty": 5,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-11T23:44:56.128Z",
-    "updatedAt": "2025-09-14T12:50:17.572Z"
+    "updatedAt": "2025-09-17T09:47:07.471Z"
   },
   {
     "componentUuid": "7f3cc7ff-7df6-4bd0-85dd-1118b57c57fe",
@@ -173,11 +173,11 @@
     "unit": "FDFHR",
     "energyType": "Fuel Diesel ",
     "parentUuid": "81dc31ef-f9d6-4f3e-9d49-5d902d6794a3",
-    "consumedQty": 2.5,
+    "consumedQty": 6,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-12T00:23:20.986Z",
-    "updatedAt": "2025-09-12T00:23:49.114Z"
+    "updatedAt": "2025-09-17T09:47:17.819Z"
   },
   {
     "componentUuid": "d70441ac-9509-4b0b-a0b5-81fd12912e1d",
@@ -191,10 +191,10 @@
     "unit": "HRS",
     "energyType": "",
     "parentUuid": "81dc31ef-f9d6-4f3e-9d49-5d902d6794a3",
-    "consumedQty": 1,
+    "consumedQty": 7,
     "emissionFactor": 0,
     "total": 0,
     "createdAt": "2025-09-12T00:24:04.675Z",
-    "updatedAt": "2025-09-14T12:50:27.794Z"
+    "updatedAt": "2025-09-17T09:47:29.538Z"
   }
 ]
